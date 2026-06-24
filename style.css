@@ -1,0 +1,795 @@
+/* ==================================================
+   VOLTANET - STYLE.CSS
+   Version Premium 2026
+================================================== */
+
+/* =========================
+   GOOGLE FONT
+========================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* =========================
+   VARIABLES
+========================= */
+
+:root {
+
+    --primary: #00B4FF;
+    --primary-dark: #0096d6;
+
+    --secondary: #0F172A;
+    --dark: #020617;
+
+    --white: #FFFFFF;
+
+    --text: #334155;
+    --text-light: #64748B;
+
+    --bg: #F8FAFC;
+    --card: #FFFFFF;
+
+    --border: #E2E8F0;
+
+    --success: #22C55E;
+
+    --shadow:
+        0 10px 30px rgba(0, 0, 0, .08);
+
+    --shadow-hover:
+        0 20px 50px rgba(0, 0, 0, .15);
+
+    --radius: 18px;
+
+    --transition: .35s ease;
+
+}
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    font-family: 'Poppins', sans-serif;
+
+    background: var(--bg);
+
+    color: var(--text);
+
+    line-height: 1.8;
+
+    overflow-x: hidden;
+
+}
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 20px;
+}
+
+/* =========================
+   BASE
+========================= */
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+
+    width: 90%;
+    max-width: 1400px;
+    margin: auto;
+
+}
+
+section {
+    padding: 100px 0;
+}
+
+/* =========================
+   PROGRESS BAR
+========================= */
+
+#progressBar {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 0;
+
+    height: 4px;
+
+    background:
+        linear-gradient(90deg,
+            var(--primary),
+            #4ad5ff);
+
+    z-index: 99999;
+
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 999;
+
+    background:
+        rgba(15, 23, 42, .92);
+
+    backdrop-filter: blur(12px);
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, .08);
+
+}
+
+.header .container {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    height: 85px;
+
+}
+
+.logo {
+
+    font-size: 2rem;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    color: var(--white);
+
+}
+
+.nav-links {
+
+    display: flex;
+
+    gap: 30px;
+
+}
+
+.nav-links a {
+
+    color: white;
+
+    font-weight: 500;
+
+    position: relative;
+
+    transition: var(--transition);
+
+}
+
+.nav-links a::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -5px;
+
+    width: 0;
+
+    height: 2px;
+
+    background: var(--primary);
+
+    transition: var(--transition);
+
+}
+
+.nav-links a:hover::after {
+
+    width: 100%;
+
+}
+
+.nav-links a:hover {
+
+    color: var(--primary);
+
+}
+
+.header-actions {
+
+    display: flex;
+    gap: 10px;
+
+}
+
+#themeToggle,
+.menu-btn {
+
+    width: 45px;
+    height: 45px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    background: white;
+
+    font-size: 18px;
+
+}
+
+.menu-btn {
+    display: none;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(rgba(2, 6, 23, .80),
+            rgba(15, 23, 42, .85)),
+        url("assets/images/hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+
+}
+
+.hero-content {
+
+    max-width: 950px;
+
+    padding: 20px;
+
+}
+
+.badge {
+
+    display: inline-block;
+
+    padding: 10px 18px;
+
+    border-radius: 50px;
+
+    background:
+        rgba(0, 180, 255, .12);
+
+    border:
+        1px solid rgba(0, 180, 255, .25);
+
+    color: var(--primary);
+
+    margin-bottom: 25px;
+
+}
+
+.hero h1 {
+
+    font-size:
+        clamp(2.8rem, 6vw, 5.5rem);
+
+    line-height: 1.1;
+
+    margin-bottom: 25px;
+
+}
+
+.hero p {
+
+    font-size: 1.2rem;
+
+    color: #CBD5E1;
+
+    margin-bottom: 40px;
+
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.hero-buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+
+}
+
+.btn-primary,
+.btn-secondary {
+
+    padding: 16px 34px;
+
+    border-radius: 50px;
+
+    transition: var(--transition);
+
+    font-weight: 600;
+
+}
+
+.btn-primary {
+
+    background: var(--primary);
+
+    color: white;
+
+}
+
+.btn-primary:hover {
+
+    transform: translateY(-4px);
+
+    background: var(--primary-dark);
+
+}
+
+.btn-secondary {
+
+    border: 2px solid white;
+
+    color: white;
+
+}
+
+.btn-secondary:hover {
+
+    background: white;
+
+    color: var(--secondary);
+
+}
+
+/* =========================
+   TITRES
+========================= */
+
+.section-title {
+
+    text-align: center;
+
+    margin-bottom: 60px;
+
+}
+
+.section-title h2 {
+
+    font-size: 3rem;
+
+    margin-bottom: 10px;
+
+    color: var(--secondary);
+
+}
+
+/* =========================
+   STATS
+========================= */
+
+.stats {
+
+    background: var(--secondary);
+
+}
+
+.stats .container {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 25px;
+
+}
+
+.stat-card {
+
+    text-align: center;
+
+    background:
+        rgba(255, 255, 255, .05);
+
+    padding: 40px;
+
+    border-radius: var(--radius);
+
+    color: white;
+
+}
+
+.stat-card h2 {
+
+    color: var(--primary);
+
+    font-size: 3rem;
+
+}
+
+/* =========================
+   SERVICES
+========================= */
+
+.services-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(300px, 1fr));
+
+    gap: 30px;
+
+}
+
+.service-card {
+
+    background: white;
+
+    border-radius: var(--radius);
+
+    overflow: hidden;
+
+    box-shadow: var(--shadow);
+
+    transition: var(--transition);
+
+}
+
+.service-card:hover {
+
+    transform: translateY(-10px);
+
+    box-shadow: var(--shadow-hover);
+
+}
+
+.service-card img {
+
+    width: 100%;
+
+    height: 220px;
+
+    object-fit: cover;
+
+}
+
+.service-card h3 {
+
+    padding: 20px 20px 10px;
+
+    color: var(--secondary);
+
+}
+
+.service-card p {
+
+    padding: 0 20px 25px;
+
+}
+
+/* =========================
+   DEPARTMENTS
+========================= */
+
+.cards {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(320px, 1fr));
+
+    gap: 30px;
+
+}
+
+.card {
+
+    background: white;
+
+    padding: 35px;
+
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow);
+
+    transition: var(--transition);
+
+}
+
+.card:hover {
+
+    transform: translateY(-10px);
+
+}
+
+.card h3 {
+
+    color: var(--primary);
+
+    margin-bottom: 20px;
+
+}
+
+.card li {
+
+    margin-bottom: 10px;
+
+}
+
+/* =========================
+   SECTION SOMBRE
+========================= */
+
+.dark {
+
+    background: var(--secondary);
+
+}
+
+.dark h2 {
+
+    color: white;
+
+}
+
+.dark .card {
+
+    background: #1E293B;
+
+    color: white;
+
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+
+    background: var(--secondary);
+
+    color: white;
+
+}
+
+.contact h2 {
+
+    text-align: center;
+
+    margin-bottom: 40px;
+
+}
+
+#contactForm {
+
+    max-width: 850px;
+
+    margin: auto;
+
+}
+
+#contactForm input,
+#contactForm textarea {
+
+    width: 100%;
+
+    padding: 16px;
+
+    margin-bottom: 20px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    font-family: inherit;
+
+}
+
+#contactForm button {
+
+    width: 100%;
+
+    padding: 18px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: var(--primary);
+
+    color: white;
+
+    font-size: 1rem;
+
+    cursor: pointer;
+
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    background: var(--dark);
+
+    color: white;
+
+    text-align: center;
+
+    padding: 40px 20px;
+
+}
+
+/* =========================
+   DARK MODE
+========================= */
+
+body.dark-mode {
+
+    background: #020617;
+
+    color: white;
+
+}
+
+body.dark-mode .service-card,
+body.dark-mode .card {
+
+    background: #111827;
+
+    color: white;
+
+}
+
+body.dark-mode .section-title h2 {
+
+    color: white;
+
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:992px) {
+
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+
+        position: fixed;
+
+        top: 85px;
+        right: -100%;
+
+        width: 300px;
+        height: 100vh;
+
+        background: #0F172A;
+
+        flex-direction: column;
+
+        padding: 40px;
+
+        transition: .4s;
+
+    }
+
+    .nav-links.active {
+
+        right: 0;
+
+    }
+
+}
+
+@media(max-width:768px) {
+
+    .hero h1 {
+
+        font-size: 2.5rem;
+
+    }
+
+    .section-title h2 {
+
+        font-size: 2rem;
+
+    }
+
+    .hero-buttons {
+
+        flex-direction: column;
+
+    }
+
+}
+
+@media(max-width:480px) {
+
+    section {
+
+        padding: 70px 0;
+
+    }
+
+    .hero h1 {
+
+        font-size: 2rem;
+
+    }
+
+}
